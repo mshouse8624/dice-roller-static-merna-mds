@@ -132,11 +132,16 @@
 				console.log(responseText)
 				document.getElementById("bmi-result").innerHTML = responseText
 			}
+			*/
 		</script>
 
+		<!--
 		<button onclick="fetchBatman()">Batman</button>
 		<div id="batmanJSON">Batman JSON</div><br /><br />
+		-->
+		
 		<script>
+			/*
 			async function fetchBatman() {
 				const url = document.getElementById("urlInput").value + "/batman";
 				const response = await fetch(url);
@@ -146,11 +151,15 @@
 				const batmanResponseText = "<pre>"+JSON.stringify(batmanResponse, null, 4)+"</pre"
 				batmanJSONField.innerHTML = batmanResponseText
 			}
+			*/
 		</script>
 
+		<!--
 		<button onclick="testFavoritePlaces()">Favorite Places</button>
 		<div id="favoritePlacesJSON">Favorite Places JSON</div><br /><br />
+		-->
 		<script>
+			/*
 			async function testFavoritePlaces() {
 				const url = document.getElementById("urlInput").value + "/api/favorite-places";
 				const response = await fetch(url);
