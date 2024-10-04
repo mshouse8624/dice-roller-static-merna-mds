@@ -57,7 +57,7 @@
 		<br><br>
 		-->
 
-		<button type="button" onclick="rollDice()">Roll Dice</button>
+		<button type="button" onclick="fetchRollDice()">Roll Dice</button>
 		<div id="fetch-roll-dice"></div>
 		<br><br>
 
@@ -85,7 +85,7 @@
 
 		<script>
 			
-			async function rollDice() {
+			async function fetchRollDice() {
 				const url = document.getElementById("urlInput").value + "/roll-dice"
 				const response = await fetch(url)
 				const responseText = await response.text()
