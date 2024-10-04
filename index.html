@@ -50,14 +50,18 @@
 	</script>
 
 	<div id="testingDiv">
+
+		<!--
 		<button type="button" onclick="fetchAbout()">Fetch About</button>
 		<div id="fetch-about-result"></div>
 		<br><br>
+		-->
 
-		<button type="button" onclick="fetch2Plus2()">Fetch 2plus2</button>
-		<div id="fetch-2plus2-result"></div>
+		<button type="button" onclick="rollDice()">Roll Dice</button>
+		<div id="fetch-roll-dice"></div>
 		<br><br>
 
+		<!--
 		Add two integers on the Node.js server.<br />
 		<select onchange="addTwoIntegers()" id="x-value">
 			<option>1</option>
@@ -77,8 +81,18 @@
 		<button type="button" onclick="calculateBMI()">Calculate BMI</button>
 		<div id="bmi-result"></div>
 		<br><br>
+		-->
 
 		<script>
+			
+			async function rollDice() {
+				const url = document.getElementById("urlInput").value + "/roll-dice"
+				const response = await fetch(url)
+				const responseText = await response.text()
+				document.getElementById("fetch-roll-dice").innerHTML = responseText
+			}
+
+			/*
 			let fetchAboutCounter = 0
 			async function fetchAbout() {
 				fetchAboutCounter++
@@ -146,6 +160,8 @@
 				const favoritePlacesText = "<pre>"+JSON.stringify(places, null, 4)+"</pre"
 				favoritePlacesJSONField.innerHTML = favoritePlacesText
 			}
+
+			*/
 		</script>
 	</div>
 </body>
