@@ -91,7 +91,7 @@
 				// const responseText = await response.text()
 				const responseText = await response.json()
 				const d6 = JSON.parse(responseText)
-				document.getElementById("fetch-d6").innerHTML = d6
+				document.getElementById("fetch-d6").innerHTML = d6['result']
 			}
 
 			/*
