@@ -90,7 +90,8 @@
 				const response = await fetch(url)
 				// const responseText = await response.text()
 				const responseText = await response.json()
-				document.getElementById("fetch-d6").innerHTML = responseText
+				const d6 = JSON.parse(responseText)
+				document.getElementById("fetch-d6").innerHTML = d6
 			}
 
 			/*
