@@ -89,7 +89,7 @@
 				const url = document.getElementById("urlInput").value + "/d6"
 				const response = await fetch(url)
 				// const responseText = await response.text()
-				let responseText = JSON.parse('/d6')
+				const responseText = await response.json()
 				document.getElementById("fetch-d6").innerHTML = responseText.result
 			}
 
